@@ -46,7 +46,6 @@ const resolvers = {
         vaccinationCount: () => vaccinations.length,
         arrivedVaccinations: () => lodash.sumBy(vaccines, 'injections'),
         orderByProducer: (root, args) => {
-            console.log(args.producer)
             const filtered = vaccines.filter(v => v.vaccine === args.producer)
             return filtered.length
         },
