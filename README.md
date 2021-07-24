@@ -14,7 +14,7 @@ Run 'npm install' to install the dependencies
 
 Run 'npm run dev' to run the backend and open the database for the frontend to access
 
-Backend in ran at http://localhost:4000
+Backend is ran at http://localhost:4000
 
 ### Frontend:
 
