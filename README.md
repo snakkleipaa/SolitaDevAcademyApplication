@@ -8,7 +8,7 @@ The backend and database is ran by using Graphql and Node.js
 
 #### Running the backend server:
 
-Move into the backend folder inside vaccines
+Move into the 'backend' folder inside 'vaccines'
 
 Run 'npm install' to install the dependencies
 
@@ -22,7 +22,7 @@ The frontend is ran by using React.js
 
 #### Running the frontend server:
 
-Move into the frontend folder inside vaccines
+Move into the 'frontend' folder inside 'vaccines'
 
 Run 'npm install' to install the dependencies
 
