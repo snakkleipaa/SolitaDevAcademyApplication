@@ -1,41 +1,71 @@
-# SolitaDevAcademyApplication
+# Vaccine data application
 
-## How to open the application: 
+Application for visualizing the provided vaccine data.
 
-### Backend:
+## Running the backend server (GraphQL & Nodejs)
 
-The backend and database is ran by using Graphql and Node.js
+Move to the **backend** directory under **vaccines**.
 
-#### Running the backend server:
+```bash
+cd backend
+```
 
-Move into the 'backend' folder inside 'vaccines'
+Use npm to install the dependencies.
 
-Run 'npm install' to install the dependencies
+```bash
+npm install
+```
 
-Run 'npm run dev' to run the backend and open the database for the frontend to access
+Start the application.
+
+```bash
+npm run dev
+```
 
 Backend is ran at http://localhost:4000
 
-### Frontend:
+## How to run tests on the backend
 
-The frontend is ran by using React.js
+Tests and expected results were defined by using the confirmed information in the exercise description.
 
-#### Running the frontend server:
+Also some easily confirmed data, such as number of vaccines per producer were tested.
 
-Move into the 'frontend' folder inside 'vaccines'
+Run the tests with Jest
 
-Run 'npm install' to install the dependencies
+```bash
+npm test
+```
 
-Run 'npm start' to start the application at http://localhost:3000
+## Running the frontend server (React)
 
-## How to run tests on the backend: 
 
-Tests and expected results were defined by using the confirmed information in the exercise description
+Move to the **frontend** directory under **vaccines**.
 
-Also some easily confirmed data, such as number of vaccines per producer were tested
+```bash
+cd frontend
+```
 
-Tests are ran by using Jest
+Use npm to install the dependencies.
 
-From the backend folder, run command 'npm test' to start the tests and get results of their passing
+```bash
+npm install
+```
 
+Run the server for frontend access
+
+```bash
+npm start
+```
+
+The application will open at http://localhost:3000
+
+## Usage
+
+General information will be displayed at the top of the application.
+
+Below you can choose a date to see date specific information based on the data used.
+
+## References
+
+Data and exercises provided by Solita Dev Academy in their application.
 
