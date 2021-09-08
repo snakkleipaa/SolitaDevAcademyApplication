@@ -36,18 +36,18 @@ const CountData = () => {
                 </li>
             </ul>
             <h2 class='subtitle is-4'>Gender distribution of vaccinations done:</h2>
-                <ul>
-                    <li>
-                        Males: {males.data.gender}
-                    </li>
-                    <li>
-                        Females: {females.data.gender}
-                    </li>
-                    <li>
-                        Nonbinary: {nonbinary.data.gender}
-                    </li>
-                </ul>
-            </section>
+            <ul>
+                <li>
+                    Males: {males.data.gender}
+                </li>
+                <li>
+                    Females: {females.data.gender}
+                </li>
+                <li>
+                    Nonbinary: {nonbinary.data.gender}
+                </li>
+            </ul>
+        </section>
     )
 }
 

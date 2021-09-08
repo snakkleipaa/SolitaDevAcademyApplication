@@ -1,9 +1,8 @@
 const { ApolloServer, gql } = require('apollo-server')
 const lodash = require('lodash')
-const data = require('./data/db')
-
 var moment = require('moment')
 
+const data = require('./data/db')
 
 const vaccines = data.vaccines
 const vaccinations = data.vaccinations
@@ -43,24 +42,30 @@ const typeDefs = gql`
 const resolvers = {
     Query: {
         vaccineCount: () => vaccines.length,
+
         vaccinationCount: () => vaccinations.length,
+
         arrivedVaccinations: () => lodash.sumBy(vaccines, 'injections'),
+
         orderByProducer: (root, args) => {
             const filtered = vaccines.filter(v => v.vaccine === args.producer)
             return filtered.length
         },
+
         orderByDate: (root, args) => {
             const filtered = vaccines.filter(v =>
             moment(new Date(v.arrived)).subtract(2,'hours').format('YYYY-MM-DD')
             === args.date)
             return filtered.length
         },
+
         expiredByDate: (root, args) => {
             const filtered = vaccines.filter(v =>
             moment(new Date(v.arrived)).subtract(2, 'hours').add(30, 'days').format('YYYY-MM-DD') 
             === args.date)
             return filtered.length
         },
+
         willExpire: (root, args) => {
             const filtered = vaccines.filter(v => {
                 const expirationDate = moment(new Date(v.arrived)).subtract(2, 'hours').add(30, 'days').format('YYYY-MM-DD')
@@ -72,6 +77,7 @@ const resolvers = {
             })
             return lodash.sumBy(filtered, 'injectionsLeft')
         },
+
         gender: (root, args) => {
             const filtered = vaccinations.filter(v =>
                 v.gender === args.gender)

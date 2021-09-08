@@ -26,6 +26,6 @@ const VaccinesPerProducer = () => {
             </ul>
         </section>
     )
-  }
+}
 
 export default VaccinesPerProducer
